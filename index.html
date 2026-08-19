@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Physxium | Han Gyeol Lee</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 60px 20px;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            line-height: 1.7;
+            color: #333;
+            background-color: #f5f5f7;
+
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+
+            margin: 0 auto;
+            padding: 44px 40px;
+
+            background: #ffffff;
+
+            border: 1px solid #eeeeee;
+            border-radius: 18px;
+
+            box-shadow:
+                0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+
+            color: #1d1d1f;
+
+            font-size: 2.1em;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            margin: 0 0 30px;
+
+            color: #6e6e73;
+
+            font-size: 1.05em;
+        }
+
+        .intro {
+            margin: 0 auto;
+
+            max-width: 590px;
+
+            color: #444;
+            font-size: 1em;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e8e8ed;
+
+            margin: 36px 0;
+        }
+
+        h2 {
+            margin: 0 0 24px;
+
+            color: #1d1d1f;
+
+            font-size: 1.55em;
+            letter-spacing: -0.015em;
+        }
+
+        .app-list {
+            width: 100%;
+        }
+
+        .app-card {
+            margin-bottom: 18px;
+            padding: 24px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5e5e7;
+            border-radius: 14px;
+
+            text-align: left;
+
+            transition:
+                transform 0.18s ease,
+                border-color 0.18s ease,
+                box-shadow 0.18s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+
+            border-color: #d2d2d7;
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-title {
+            display: inline-block;
+
+            margin-bottom: 7px;
+
+            color: #0066cc;
+
+            font-size: 1.18em;
+            font-weight: 650;
+
+            text-decoration: none;
+        }
+
+        a.app-title:hover {
+            text-decoration: underline;
+        }
+
+        .app-card p {
+            margin: 0;
+
+            color: #515154;
+
+            font-size: 0.96em;
+            line-height: 1.65;
+        }
+
+        /* Book */
+
+        .book-card {
+            display: flex;
+            align-items: center;
+
+            gap: 24px;
+        }
+
+        .book-cover {
+            width: 105px;
+            height: auto;
+
+            flex-shrink: 0;
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.14);
+        }
+
+        .book-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .book-links {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin-top: 14px;
+        }
+
+        .store-link {
+            display: inline-block;
+
+            padding: 6px 12px;
+
+            color: #0066cc;
+            background: #f5f5f7;
+
+            border-radius: 8px;
+
+            font-size: 0.85em;
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        .store-link:hover {
+            background: #ebebef;
+        }
+
+        /* Footer */
+
+        .contact {
+            margin: 34px auto 0;
+
+            max-width: 560px;
+
+            color: #6e6e73;
+
+            font-size: 0.92em;
+        }
+
+        .privacy-link {
+            display: inline-block;
+
+            margin-top: 34px;
+
+            color: #86868b;
+
+            font-size: 0.85em;
+
+            text-decoration: none;
+        }
+
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 560px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .container {
+                padding: 34px 22px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.7em;
+            }
+
+            .subtitle {
+                font-size: 0.95em;
+            }
+
+            .book-card {
+                gap: 17px;
+                align-items: flex-start;
+            }
+
+            .book-cover {
+                width: 82px;
+            }
+
+            .app-card {
+                padding: 19px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .book-card {
+                display: block;
+            }
+
+            .book-cover {
+                width: 90px;
+                margin-bottom: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Physxium (Han Gyeol Lee)</h1>
+
+        <p class="subtitle">
+            Independent Developer, Creator, and Researcher
+        </p>
+
+        <p class="intro">
+            I explore science, technology, and everyday curiosity through
+            research, writing, and independent projects.
+            My work ranges from popular science communication to simple
+            digital tools designed to make ideas and experiences more
+            accessible and engaging.
+        </p>
+
+
+        <hr>
+
+
+        <div class="app-list">
+
+            <h2>Selected Works</h2>
+
+
+            <!-- Google Scholar -->
+            <div class="app-card">
+
+                <a
+                    class="app-title"
+                    href="https://scholar.google.co.kr/citations?user=h7t9Xc8AAAAJ&hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Scholar
+                </a>
+
+                <p>
+                    Academic publications and research contributions in physics and related fields.
+                </p>
+
+            </div>
+
+
+            <!-- Book -->
+            <div class="app-card book-card">
+
+                <img
+                    class="book-cover"
+                    src="https://image.aladin.co.kr/product/38469/4/cover500/k622135916_1.jpg"
+                    alt="이런 과학 처음이야 book cover"
+                >
+
+                <div class="book-info">
+
+                    <div class="app-title">
+                        이런 과학 처음이야
+                    </div>
+
+                    <p>
+                        A popular science book exploring the unexpected physics
+                        and scientific ideas hidden in everyday life, written
+                        for curious readers beyond the science classroom.
+                    </p>
+
+                    <div class="book-links">
+
+                        <a
+                            class="store-link"
+                            href="https://product.kyobobook.co.kr/detail/S000219060590"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Kyobo
+                        </a>
+
+                        <a
+                            class="store-link"
+                            href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384690419&srsltid=AfmBOorhx1p-tOqRFV_rU4S-XtlKCU8qaZevTqndRdQcYyNnJcnn8GWZ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Aladin
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Don't Spoil LCK -->
+            <div class="app-card">
+
+                <a
+                    class="app-title"
+                    href="https://physxium.github.io/dslck/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Don't Spoil LCK
+                </a>
+
+                <p>
+                    A spoiler-free gateway to official LCK full VODs and
+                    match highlights, helping viewers find the game they want
+                    without seeing the result first.
+                </p>
+
+            </div>
+
+
+            <!-- GeomeTry -->
+            <div class="app-card">
+
+                <a
+                    class="app-title"
+                    href="https://play.google.com/store/apps/details?id=com.Physxium.GeomeTry&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GeomeTry: Perfect Drawing
+                </a>
+
+                <p>
+                    A simple precision-drawing game that challenges you to
+                    create geometric shapes as accurately as possible.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="contact">
+            For questions, feedback, or collaboration inquiries,
+            please use the contact information provided through my
+            published works or applications.
+        </p>
+
+
+        <a
+            class="privacy-link"
+            href="https://physxium.github.io/privacy.html"
+        >
+            Privacy Policy
+        </a>
+
+    </div>
+
+</body>
+</html>
