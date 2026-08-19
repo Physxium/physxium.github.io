@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Physxium | Han Gyeol Lee</title>
-    
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const forceEnglish = params.get("lang") === "en";
+
+        const browserLanguage =
+            navigator.language ||
+            navigator.userLanguage ||
+            "";
+
+        if (
+            !forceEnglish &&
+            browserLanguage.toLowerCase().startsWith("ko")
+        ) {
+            window.location.replace("./ko.html");
+        }
+    </script>
+
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6908864739979028"
         crossorigin="anonymous"></script>
@@ -36,6 +53,8 @@
         }
 
         .container {
+            position: relative;
+
             width: 100%;
             max-width: 680px;
 
@@ -49,6 +68,29 @@
 
             box-shadow:
                 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .language-link {
+            position: absolute;
+            top: 20px;
+            right: 22px;
+
+            padding: 5px 10px;
+
+            color: #6e6e73;
+            background: #f5f5f7;
+
+            border-radius: 8px;
+
+            font-size: 0.82em;
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        .language-link:hover {
+            background: #ebebef;
+            color: #1d1d1f;
         }
 
         h1 {
@@ -241,8 +283,13 @@
             }
 
             .container {
-                padding: 34px 22px;
+                padding: 58px 22px 34px;
                 border-radius: 16px;
+            }
+
+            .language-link {
+                top: 16px;
+                right: 16px;
             }
 
             h1 {
@@ -283,6 +330,13 @@
 <body>
 
     <div class="container">
+
+        <a
+            class="language-link"
+            href="./ko.html"
+        >
+            한국어
+        </a>
 
         <h1>Physxium (Han Gyeol Lee)</h1>
 
