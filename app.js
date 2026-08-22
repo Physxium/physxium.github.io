@@ -240,10 +240,13 @@ function renderLanguage(language) {
         text.languageButton;
 
 
-    document
-        .getElementById("support-link")
-        .textContent =
-        text.support;
+    const supportLink =
+        document.getElementById("support-link");
+
+    if (supportLink) {
+        supportLink.textContent =
+            text.support;
+    }
 
 
     renderProjects(language);
