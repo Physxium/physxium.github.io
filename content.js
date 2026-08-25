@@ -224,7 +224,7 @@ const PROJECTS = [
                     "A browser-based auto-battler roguelike where you build stats and augments to survive 20 stages of advancing enemies.",
 
                 ko:
-                    "밀려오는 적을 막으며 능력치와 증강을 조합해 20개의 스테이지에 도전하는 웹 자동전투 로그라이크 게임입니다."
+                    "능력치와 증강을 조합해 밀려오는 적을 막고 20개의 스테이지에 도전하는 웹 자동전투 로그라이크 게임입니다."
             }
         },
 
