@@ -19,22 +19,63 @@
             text-align: left;
         }
 
+        .privacy-header {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
         .privacy-container h1 {
+            margin-bottom: 8px;
             text-align: center;
         }
 
         .privacy-subtitle {
-            margin: 0 0 36px;
-
+            margin: 0;
             color: #6e6e73;
-
             font-size: 0.95em;
             text-align: center;
         }
 
+        .language-switch {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+
+            margin-top: 20px;
+        }
+
+        .language-button {
+            padding: 7px 12px;
+
+            border: 1px solid #d2d2d7;
+            border-radius: 999px;
+
+            background: #ffffff;
+            color: #6e6e73;
+
+            font: inherit;
+            font-size: 0.85em;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .language-button:hover {
+            border-color: #86868b;
+        }
+
+        .language-button.active {
+            border-color: #1d1d1f;
+            background: #1d1d1f;
+            color: #ffffff;
+        }
+
         .privacy-container h2 {
             margin: 34px 0 10px;
-
             font-size: 1.25em;
         }
 
@@ -57,19 +98,21 @@
 
         .privacy-footer {
             margin-top: 38px;
-
             text-align: center;
         }
 
         .back-link {
             color: #86868b;
-
             font-size: 0.9em;
             text-decoration: none;
         }
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .language-section[hidden] {
+            display: none;
         }
     </style>
 </head>
@@ -78,134 +121,470 @@
 
     <main class="container privacy-container">
 
-        <h1>Privacy Policy</h1>
+        <div class="privacy-header">
 
-        <p class="privacy-subtitle">
-            Last updated: August 2026
-        </p>
+            <h1 id="page-title">Privacy Policy</h1>
 
+            <p class="privacy-subtitle" id="page-subtitle">
+                Last updated: August 2026
+            </p>
 
-        <p>
-            This Privacy Policy applies to
-            <strong>physxium.pages.dev</strong>
-            and related websites, applications, and independent services
-            operated under the Physxium name.
-        </p>
+            <div class="language-switch" aria-label="Language selection">
 
+                <button type="button" class="language-button" id="lang-ko" onclick="setLanguage('ko')">
+                    한국어
+                </button>
 
-        <h2>Information We Collect</h2>
+                <button type="button" class="language-button" id="lang-en" onclick="setLanguage('en')">
+                    English
+                </button>
 
-        <p>
-            This website does not require user registration and does not
-            intentionally collect personally identifiable information such as
-            names, email addresses, phone numbers, or payment information.
-        </p>
+            </div>
 
-        <p>
-            Technical information may be processed automatically by hosting,
-            analytics, or other third-party service providers. Depending on
-            the service, this may include:
-        </p>
-
-        <ul>
-            <li>IP address</li>
-            <li>browser and device information</li>
-            <li>pages visited and usage information</li>
-            <li>cookies or similar technologies</li>
-            <li>other technical information necessary to provide or measure the service</li>
-        </ul>
+        </div>
 
 
-        <h2>Analytics</h2>
+        <!-- Korean -->
 
-        <p>
-            This website may use Google Analytics to understand general site
-            usage and improve the website and related services.
-        </p>
+        <section id="content-ko" class="language-section" lang="ko" hidden>
 
-        <p>
-            Google Analytics may process technical and usage information
-            according to Google's own privacy policies and settings.
-        </p>
-
-
-        <h2>Third-Party Services and External Links</h2>
-
-        <p>
-            This website contains links to external websites and services,
-            including research platforms, bookstores, application stores,
-            content platforms, support services, and independent project
-            websites.
-        </p>
-
-        <p>
-            These external services are governed by their own privacy policies
-            and terms. Physxium does not control their data-processing
-            practices, security, or content.
-        </p>
+            <p>
+                본 개인정보처리방침은
+                <strong>physxium.pages.dev</strong>
+                및 Physxium이 운영하는 독립 웹사이트, 애플리케이션,
+                서비스에 적용되며 별도의 도메인 또는 서브도메인에서
+                제공되는 서비스도 포함합니다.
+            </p>
 
 
-        <h2>Publicly Available Data and Content</h2>
+            <h2>수집하는 정보</h2>
 
-        <p>
-            Some independent projects operated by Physxium may organize,
-            index, or display information made publicly available by public
-            institutions or third-party platforms.
-        </p>
+            <p>
+                Physxium의 웹사이트 및 서비스는 일반적으로 회원가입을
+                요구하지 않으며, 개별 서비스에서 별도로 명시하지 않는 한
+                이름, 이메일 주소, 전화번호, 결제정보와 같은 개인식별정보를
+                의도적으로 수집하지 않습니다.
+            </p>
 
-        <p>
-            Unless otherwise stated, copyright and ownership of third-party
-            content remain with their respective owners.
-        </p>
+            <p>
+                다만 호스팅, 분석, 광고 및 기타 제3자 서비스 제공업체에 의해
+                일부 기술적 정보가 자동으로 처리될 수 있습니다.
+                서비스에 따라 다음 정보가 포함될 수 있습니다.
+            </p>
 
-
-        <h2>Applications and Related Services</h2>
-
-        <p>
-            Applications and related services published by Physxium may use
-            third-party platform services such as Google Play Services or
-            similar infrastructure.
-        </p>
-
-        <p>
-            Individual applications or services may provide additional privacy
-            information when their data-processing practices differ materially
-            from this general policy.
-        </p>
+            <ul>
+                <li>IP 주소</li>
+                <li>브라우저 및 기기 정보</li>
+                <li>방문 페이지 및 서비스 이용 정보</li>
+                <li>쿠키 또는 이와 유사한 기술을 통해 처리되는 정보</li>
+                <li>서비스 제공, 보안 또는 이용 측정에 필요한 기타 기술 정보</li>
+            </ul>
 
 
-        <h2>Changes to This Privacy Policy</h2>
+            <h2>웹사이트 이용 분석</h2>
 
-        <p>
-            This Privacy Policy may be updated when website features,
-            applications, third-party services, or data-processing practices
-            change.
-        </p>
+            <p>
+                일부 Physxium 웹사이트 및 서비스는 전반적인 이용 현황을
+                이해하고 서비스 품질을 개선하기 위해 Google Analytics 또는
+                유사한 분석 서비스를 사용할 수 있습니다.
+            </p>
 
-        <p>
-            Any changes will be reflected on this page together with an updated
-            revision date.
-        </p>
+            <p>
+                Google Analytics는 Google의 개인정보처리방침,
+                이용약관 및 관련 설정에 따라 기술정보와 이용정보를
+                처리할 수 있습니다.
+            </p>
 
 
-        <h2>Contact</h2>
+            <h2>광고</h2>
 
-        <p>
-            For questions regarding this Privacy Policy, please use the contact
-            information provided through Physxium's published works,
-            applications, or related services.
-        </p>
+            <p>
+                일부 Physxium 웹사이트 및 관련 서비스에는 Google AdSense
+                또는 기타 제3자 광고 서비스가 사용될 수 있습니다.
+            </p>
+
+            <p>
+                Google을 포함한 제3자 광고 제공업체는 사용자가 Physxium의
+                웹사이트, 관련 서비스 또는 다른 웹사이트를 방문한 정보를
+                바탕으로 광고를 제공하기 위해 쿠키 또는 이와 유사한 기술을
+                사용할 수 있습니다.
+            </p>
+
+            <p>
+                광고 제공업체는 각 업체의 개인정보처리방침 및 관련 설정에 따라
+                기기 정보, 브라우저 정보, IP 주소, 광고 식별자, 쿠키 정보,
+                웹사이트 또는 광고와의 상호작용 정보 등을 처리할 수 있습니다.
+            </p>
+
+            <p>
+                사용자는 Google의 광고 설정 및 각 광고 서비스나 브라우저에서
+                제공하는 개인정보 보호 설정을 통해 개인 맞춤형 광고와 관련된
+                설정을 관리할 수 있습니다.
+            </p>
+
+
+            <h2>쿠키 및 유사 기술</h2>
+
+            <p>
+                Physxium 웹사이트 및 관련 제3자 서비스는 서비스 운영,
+                이용 분석, 광고, 사용자 환경 설정, 보안 및 성능 측정을 위해
+                쿠키, 로컬 저장소 또는 유사한 기술을 사용할 수 있습니다.
+            </p>
+
+            <p>
+                사용자는 브라우저 설정을 통해 쿠키를 관리하거나 삭제할 수
+                있습니다. 일부 기술을 차단할 경우 특정 웹사이트 또는
+                제3자 서비스의 기능이 제한될 수 있습니다.
+            </p>
+
+
+            <h2>제3자 서비스 및 외부 링크</h2>
+
+            <p>
+                Physxium 웹사이트에는 연구 플랫폼, 서점, 애플리케이션 스토어,
+                콘텐츠 플랫폼, 후원 서비스, 공공기관 또는 독립 프로젝트
+                웹사이트 등 외부 사이트와 서비스로 연결되는 링크가 포함될 수
+                있습니다.
+            </p>
+
+            <p>
+                이러한 외부 서비스에는 각 서비스의 개인정보처리방침과
+                이용약관이 적용됩니다. Physxium은 외부 서비스의 개인정보
+                처리 방식, 보안, 서비스 제공 여부 또는 콘텐츠를 통제하지
+                않습니다.
+            </p>
+
+
+            <h2>공개 데이터 및 제3자 콘텐츠</h2>
+
+            <p>
+                Physxium이 운영하는 일부 독립 프로젝트는 공공기관,
+                공식 API 또는 제3자 플랫폼에서 공개된 정보를 정리, 색인,
+                처리, 요약하거나 표시할 수 있습니다.
+            </p>
+
+            <p>
+                별도로 명시되지 않는 한 제3자 콘텐츠의 저작권,
+                상표권 및 기타 권리는 해당 권리자에게 있습니다.
+            </p>
+
+
+            <h2>애플리케이션 및 관련 서비스</h2>
+
+            <p>
+                Physxium에서 제공하는 애플리케이션 및 관련 서비스는
+                Google Play Services, 애플리케이션 스토어, 분석 서비스,
+                광고 서비스 또는 이와 유사한 제3자 인프라를 사용할 수
+                있습니다.
+            </p>
+
+            <p>
+                개별 애플리케이션 또는 서비스의 기능이나 개인정보 처리 방식이
+                본 일반 개인정보처리방침과 실질적으로 다른 경우 별도의
+                개인정보 관련 안내를 제공할 수 있습니다.
+            </p>
+
+
+            <h2>정보 보관</h2>
+
+            <p>
+                Physxium은 개별 서비스에서 별도로 명시하지 않는 한
+                일반 웹사이트를 통해 개인식별정보를 의도적으로 보관하지
+                않습니다.
+            </p>
+
+            <p>
+                제3자 서비스 제공업체는 각 업체의 개인정보처리방침 및
+                보관 정책에 따라 기술정보, 분석정보, 광고정보 또는
+                서비스 관련 정보를 보관할 수 있습니다.
+            </p>
+
+
+            <h2>개인정보처리방침 변경</h2>
+
+            <p>
+                본 개인정보처리방침은 웹사이트 기능, 애플리케이션,
+                제3자 서비스, 광고 서비스 또는 정보 처리 방식의 변경에 따라
+                수정될 수 있습니다.
+            </p>
+
+            <p>
+                변경사항이 있는 경우 본 페이지와 최종 수정일을 통해
+                안내합니다.
+            </p>
+
+
+            <h2>문의</h2>
+
+            <p>
+                본 개인정보처리방침에 관한 문의는 Physxium의 출판물,
+                애플리케이션, 웹사이트 또는 관련 서비스를 통해 제공되는
+                연락처를 이용해 주세요.
+            </p>
+
+        </section>
+
+
+        <!-- English -->
+
+        <section id="content-en" class="language-section" lang="en">
+
+            <p>
+                This Privacy Policy applies to
+                <strong>physxium.pages.dev</strong>
+                and independent websites, applications, and services operated by
+                Physxium, including services hosted under separate domains or
+                subdomains.
+            </p>
+
+
+            <h2>Information We Collect</h2>
+
+            <p>
+                Physxium websites and services generally do not require user
+                registration and do not intentionally collect personally
+                identifiable information such as names, email addresses,
+                phone numbers, or payment information unless explicitly stated
+                by an individual service.
+            </p>
+
+            <p>
+                Technical information may be processed automatically by hosting,
+                analytics, advertising, or other third-party service providers.
+                Depending on the service, this may include:
+            </p>
+
+            <ul>
+                <li>IP address</li>
+                <li>browser and device information</li>
+                <li>pages visited and usage information</li>
+                <li>cookies or similar technologies</li>
+                <li>other technical information necessary to provide, secure, or measure the service</li>
+            </ul>
+
+
+            <h2>Analytics</h2>
+
+            <p>
+                Some Physxium websites and services may use Google Analytics or
+                similar analytics services to understand general site usage,
+                measure performance, and improve websites and related services.
+            </p>
+
+            <p>
+                Google Analytics may process technical and usage information
+                according to Google's own privacy policies, terms, and settings.
+            </p>
+
+
+            <h2>Advertising</h2>
+
+            <p>
+                Some Physxium websites and related services may use Google AdSense
+                or other third-party advertising services.
+            </p>
+
+            <p>
+                Google and other third-party vendors may use cookies or similar
+                technologies to serve ads based on a user's visits to a Physxium
+                website, related services, or other websites.
+            </p>
+
+            <p>
+                Advertising providers may process information such as device
+                information, browser information, IP address, advertising
+                identifiers, cookie data, and information about interactions with
+                websites or advertisements, subject to their own privacy policies
+                and applicable settings.
+            </p>
+
+            <p>
+                Users may manage or opt out of personalized advertising through
+                Google's advertising settings and other applicable privacy
+                controls provided by advertising or browser services.
+            </p>
+
+
+            <h2>Cookies and Similar Technologies</h2>
+
+            <p>
+                Physxium websites and related third-party services may use cookies,
+                local storage, or similar technologies for functions such as
+                analytics, advertising, service operation, preferences, security,
+                and performance measurement.
+            </p>
+
+            <p>
+                Users may control or delete cookies through their browser settings.
+                Disabling certain technologies may affect the functionality of
+                some websites or third-party services.
+            </p>
+
+
+            <h2>Third-Party Services and External Links</h2>
+
+            <p>
+                Physxium websites may contain links to external websites and
+                services, including research platforms, bookstores, application
+                stores, content platforms, support services, public institutions,
+                and independent project websites.
+            </p>
+
+            <p>
+                These external services are governed by their own privacy policies
+                and terms. Physxium does not control their data-processing
+                practices, security, availability, or content.
+            </p>
+
+
+            <h2>Publicly Available Data and Content</h2>
+
+            <p>
+                Some independent projects operated by Physxium may organize,
+                index, process, summarize, or display information made publicly
+                available by public institutions, official APIs, or third-party
+                platforms.
+            </p>
+
+            <p>
+                Unless otherwise stated, copyright, trademarks, data rights, and
+                ownership of third-party content remain with their respective
+                owners.
+            </p>
+
+
+            <h2>Applications and Related Services</h2>
+
+            <p>
+                Applications and related services published by Physxium may use
+                third-party platform services such as Google Play Services,
+                application stores, analytics services, advertising services, or
+                similar infrastructure.
+            </p>
+
+            <p>
+                Individual applications or services may provide additional privacy
+                information when their features or data-processing practices differ
+                materially from this general policy.
+            </p>
+
+
+            <h2>Data Retention</h2>
+
+            <p>
+                Physxium does not intentionally retain personally identifiable
+                information through its general websites unless an individual
+                service explicitly states otherwise.
+            </p>
+
+            <p>
+                Third-party providers may retain technical, analytics, advertising,
+                or service-related information according to their own policies and
+                retention periods.
+            </p>
+
+
+            <h2>Changes to This Privacy Policy</h2>
+
+            <p>
+                This Privacy Policy may be updated when website features,
+                applications, third-party services, advertising services, or
+                data-processing practices change.
+            </p>
+
+            <p>
+                Any changes will be reflected on this page together with an updated
+                revision date.
+            </p>
+
+
+            <h2>Contact</h2>
+
+            <p>
+                For questions regarding this Privacy Policy, please use the contact
+                information provided through Physxium's published works,
+                applications, websites, or related services.
+            </p>
+
+        </section>
 
 
         <div class="privacy-footer">
 
-            <a class="back-link" href="/">
+            <a class="back-link" href="/" id="back-link">
                 ← Back to Physxium
             </a>
 
         </div>
 
     </main>
+
+
+    <script>
+        function setLanguage(language) {
+            const koContent = document.getElementById("content-ko");
+            const enContent = document.getElementById("content-en");
+
+            const koButton = document.getElementById("lang-ko");
+            const enButton = document.getElementById("lang-en");
+
+            const title = document.getElementById("page-title");
+            const subtitle = document.getElementById("page-subtitle");
+            const backLink = document.getElementById("back-link");
+
+            if (language === "ko") {
+                koContent.hidden = false;
+                enContent.hidden = true;
+
+                koButton.classList.add("active");
+                enButton.classList.remove("active");
+
+                document.documentElement.lang = "ko";
+
+                title.textContent = "개인정보처리방침";
+                subtitle.textContent = "최종 수정: 2026년 8월";
+                backLink.textContent = "← Physxium으로 돌아가기";
+            } else {
+                koContent.hidden = true;
+                enContent.hidden = false;
+
+                koButton.classList.remove("active");
+                enButton.classList.add("active");
+
+                document.documentElement.lang = "en";
+
+                title.textContent = "Privacy Policy";
+                subtitle.textContent = "Last updated: August 2026";
+                backLink.textContent = "← Back to Physxium";
+            }
+
+            localStorage.setItem("physxium-language", language);
+        }
+
+
+        function initializeLanguage() {
+            const savedLanguage = localStorage.getItem("physxium-language");
+
+            if (savedLanguage === "ko" || savedLanguage === "en") {
+                setLanguage(savedLanguage);
+                return;
+            }
+
+            const browserLanguage =
+                navigator.language ||
+                navigator.userLanguage ||
+                "en";
+
+            if (browserLanguage.toLowerCase().startsWith("ko")) {
+                setLanguage("ko");
+            } else {
+                setLanguage("en");
+            }
+        }
+
+
+        initializeLanguage();
+    </script>
 
 </body>
 
