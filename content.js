@@ -140,6 +140,28 @@ const PROJECTS = [
 
 
     /* --------------------------------
+     볼만한픽 / Pick to Watch
+  -------------------------------- */
+
+    {
+        type: "link",
+
+        title:
+            "볼만한픽 / Pick to Watch",
+
+        url:
+            "https://watchpick.pages.dev/",
+
+        description: {
+            en:
+                "A lightweight OTT discovery tool that recommends a small set of movies and series based on streaming services, genres, production regions, and release period.",
+
+            ko:
+                "OTT, 장르, 제작 지역, 연도 조건을 선택하면 지금 볼 만한 영화와 시리즈를 간단히 추천해주는 서비스입니다. 많은 목록 대신 평가 상위작, 행운의 발견, 최신작만 추려 보여줍니다."
+        }
+    },
+    
+    /* --------------------------------
        놀만한날
     -------------------------------- */
 
