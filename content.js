@@ -118,8 +118,8 @@ const PROJECTS = [
         links: [
             {
                 label: {
-                    en: "Kyobo🔗",
-                    ko: "교보문고🔗"
+                    en: "Kyobo↗",
+                    ko: "교보문고↗"
                 },
 
                 url:
@@ -128,8 +128,8 @@ const PROJECTS = [
 
             {
                 label: {
-                    en: "Aladin🔗",
-                    ko: "알라딘🔗"
+                    en: "Aladin↗",
+                    ko: "알라딘↗"
                 },
 
                 url:
