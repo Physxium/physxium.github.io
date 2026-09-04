@@ -183,6 +183,28 @@ const PROJECTS = [
         }
     },
 
+    /* --------------------------------
+   게임 종합능력 평가 / Gaming Ability Assessment
+    -------------------------------- */
+
+        {
+            type: "link",
+
+            title:
+                "게임 종합능력 평가 / Gaming Ability Assessment",
+
+            url:
+                "https://gamertest.pages.dev/",
+
+            description: {
+                en:
+                    "A short browser-based gaming ability test that evaluates reaction speed, decision making, multitasking, precision, and prediction through five mini-games. Results are summarized with a radar chart, total score, and player title.",
+
+                ko:
+                    "반응속도, 판단력, 멀티태스킹, 수행정확성, 예측력을 다섯 개의 짧은 미니게임으로 평가하는 게임 능력 테스트입니다. 결과는 500점 만점의 종합 점수와 레이더맵, 플레이어 칭호로 보여줍니다."
+            }
+        },
+
 
     /* --------------------------------
        속보일지도
