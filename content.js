@@ -139,6 +139,25 @@ const PROJECTS = [
     },
 
 
+{
+    type: "link",
+
+    title:
+        "플레독스 / Pladox",
+
+    url:
+        "https://youtube.com/@pla-dox",
+
+    description: {
+        en:
+            "A YouTube channel exploring interesting ideas and debates around game design and play.",
+
+        ko:
+            "게임 디자인과 플레이를 둘러싼 흥미로운 질문과 담론을 다루는 유튜브 채널입니다."
+    }
+},
+
+
     /* --------------------------------
      볼만한픽 / Pick to Watch
   -------------------------------- */
