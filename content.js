@@ -203,6 +203,28 @@ const PROJECTS = [
     },
 
     /* --------------------------------
+   인사팀 시뮬레이터 / HR Simulator
+-------------------------------- */
+
+    {
+        type: "link",
+
+        title:
+            "인사팀 시뮬레이터 / HR Simulator",
+
+        url:
+            "https://hr-sim.pages.dev/",
+
+        description: {
+            en:
+                "A Korean-language workplace satire game. Survive 12 months as an HR manager by balancing limited budgets, employee requests, executive demands, and the way you explain your decisions.",
+
+            ko:
+                "인사팀장으로 12개월을 버티는 회사 생활 풍자 게임입니다. 직원·경영진·개발팀·언론의 요청에 대응하며, 한정된 예산으로 실제 조치와 그럴듯한 설명 사이에서 선택하세요."
+        }
+    },
+
+    /* --------------------------------
    게임 종합능력 평가 / Gaming Ability Assessment
     -------------------------------- */
 
